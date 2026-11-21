@@ -1,0 +1,886 @@
+DAY - 3
+
+DAY 3 — OPERATORS + CONDITIONAL STATEMENTS + LOOPS
+Yesterday namma values store panna kathukittom. Ippo price and quantity irukku. Total price epdi calculate pannuvom
+console.log(price * quantity);
+
+WHAT IS AN OPERATOR?
+calculator use pannumbodhu +, -, ×, ÷ use pannuvom la?"
+
+"Programming-layum values-kku operation panna symbols use panrom.
+
+An operator is a symbol that tells JavaScript to operate on one or more values.
+
+ARITHMETIC OPERATORS
+
+Arithmetic operators na normal calculation-ku use panra operators
+Addition
+console.log(10 + 5);
+
+Output:
+
+15
+
+Subtraction
+console.log(10 - 5);
+
+Output:
+
+5
+Multiplication
+console.log(10 * 5);
+
+Output:
+
+50
+Division
+console.log(10 / 2);
+
+Output:
+
+5
+Remainder %
+
+This needs a simple explanation.
+
+"10-ai 3-la divide pannina remainder enna?"
+
+Answer: 1.
+
+console.log(10 % 3);
+
+Output:
+
+1
+Real-life example
+
+"Oru class-la 10 students irukku."
+
+"3 members per group."
+
+"How many students are left?"
+
+That remainder can be calculated using %
+-------------------------------------------------
+ASSIGNMENT OPERATORS
+Start with =
+
+Students already saw this with variables.
+
+let score = 10;
+
+Explain:
+
+"= means value assign panrom."
+
+Then:
+
+score = score + 5;
+
+Now show shorthand:
+
+score += 5;
+
+Both mean:
+
+"Current score-kku 5 add panni update pannunga."
+
+Similarly:
+
+score -= 2;
+
+means:
+
+"Current score-lendhu 2 subtract panni update pannunga."
+
+Simple examples
+let score = 10;
+
+score += 5;
+console.log(score);
+
+score -= 2;
+console.log(score);
+
+Output:
+
+15
+13
+Real-life example
+
+"Game score 10."
+
+"Player gets 5 points."
+
+"Score becomes 15."
+
+"Player loses 2 points."
+
+"Score becomes 13."
+
+That's exactly the idea behind += and -=.
+------------------------------------------
+COMPARISON OPERATORS
+
+Tell students:
+
+"Ippo calculation mattum illa. Two values compare panna vendiyirukkum."
+
+Example:
+
+"Age 18 or more-ah?"
+
+"Password correct-ah?"
+
+"Price 500-ku equal-ah?"
+
+Definition
+
+Comparison operators are used to compare two values and produce true or false.
+
+Tanglish
+
+"Rendu values compare panni answer true or false kudukkum."
+
+Cover the required operators:
+
+==    equal value
+===   equal value and type
+!=    not equal value
+!==   not equal value or type
+>     greater than
+<     less than
+>=    greater than or equal
+<=    less than or equal
+------------------------------------
+==
+console.log(10 == 10);
+
+Output:
+
+true
+Simple explanation
+
+"Both values equal-ah irukku."
+
+===
+
+Use a very simple example:
+
+console.log(10 === 10);
+false
+
+>, <, >=, <=
+console.log(10 > 5);
+console.log(10 < 5);
+console.log(10 >= 10);
+console.log(5 <= 10);
+
+Outputs:
+
+true
+false
+true
+true
+---
+REAL-LIFE EXAMPLE
+
+Tell students:
+
+"Suppose exam pass mark is 40."
+
+let marks = 65;
+
+console.log(marks >= 40);
+
+Output:
+
+true
+
+Then:
+
+"So comparison operators help us answer questions.
+
+Playwright connection
+
+Later you'll use comparisons while checking:
+
+"Expected value equals actual value?"
+
+That's one of the basic ideas behind test verification.
+
+For example, conceptually:
+
+expected === actual
+
+We are asking:
+
+"Rendu values same-ah?"
+------------------
+LOGICAL OPERATORS
+Logical operators are used to combine or reverse conditions.
+AND &&
+
+Example:
+
+"Login successful AND user active."
+
+Both should be true.
+
+let loggedIn = true;
+let active = true;
+
+console.log(loggedIn && active);
+
+Output:
+
+true
+
+If one is false → overall false.
+---------------------------------
+REAL-LIFE EXAMPLE
+
+cae licnescse age = 18 and car test pass rendu um check panuvangala
+That is &&.
+
+"Login with Google OR Email."
+
+That is ||.
+
+"User logged in illa."
+
+That is !loggedIn.
+
+This makes logical operators easier to remember.
+---------------------------------------
+TERNARY OPERATOR
+
+Start with an if
+let age = 20;
+
+if (age >= 18) {
+    console.log("Adult");
+}
+
+Then say:
+
+"Sometimes simple condition-ku short form use pannalam."
+
+Definition
+
+The ternary operator is a short way to write a simple if-else condition.
+
+Syntax
+condition? valueIfTrue : valueIfFalse
+
+Example:
+
+let age = 20;
+
+let result = age >= 18 ? "Adult" : "Minor";
+
+console.log(result);
+
+Explain:
+
+"Condition true-na Adult."
+
+"False-na Minor."
+---
+WHAT IS A CONDITION?
+⏱️ 22–24 minutes
+
+Now move from operators to conditions.
+
+Ask:
+
+"Suppose marks 40 or above na Pass. Below 40 na Fail."
+
+This is a decision.
+
+Definition
+
+A condition is an expression that gives a true or false result and is used to make a decision.
+
+Tanglish
+
+"Condition na oru question madhiri."
+
+"Adhoda answer true illa false."
+
+Example:
+
+marks >= 40
+
+If marks = 70:
+
+true.
+
+If marks = 20:
+
+false.
+
+This becomes the basis of conditional statements.
+
+PART 10 — if
+⏱️ 24–26 minutes
+Definition
+
+if is used to execute code when a condition is true.
+
+Tanglish
+
+"Condition true-na indha code execute pannunga nu sollradhu if."
+
+Example:
+
+let marks = 70;
+
+if (marks >= 40) {
+    console.log("Pass");
+}
+
+Explain line by line:
+
+marks >= 40
+↓
+condition
+
+If true
+↓
+print Pass
+
+Ask:
+
+"Marks 30 aana?"
+
+Nothing is printed because the condition is false.
+
+PART 11 — if-else
+⏱️ 26–28 minutes
+
+Ask:
+
+"Condition true illana enna pannuvom?"
+
+Introduce else.
+
+Definition
+
+if-else lets us choose between two outcomes.
+
+Example:
+
+let marks = 30;
+
+if (marks >= 40) {
+    console.log("Pass");
+} else {
+    console.log("Fail");
+}
+Tanglish
+
+"Condition true-na first block."
+
+"False-na else block."
+"ATM-la balance sufficient-ah irundha money withdraw."
+
+"Illana insufficient balance."
+
+Same structure:
+
+Condition true → Withdraw
+Condition false → Insufficient balance
+PART 12 — else if
+⏱️ 28–30 minutes
+
+Now introduce multiple choices.
+
+Example:
+
+90+ → A
+
+75+ → B
+
+50+ → C
+
+Below 50 → D
+
+let marks = 80;
+
+if (marks >= 90) {
+    console.log("A");
+} else if (marks >= 75) {
+    console.log("B");
+} else if (marks >= 50) {
+    console.log("C");
+} else {
+    console.log("D");
+}
+Tanglish
+
+"More than two possibilities irundha else if use pannalam."
+
+Ask:
+
+"Marks 80. Which block execute aagum?"
+
+B
+---
+conditional Statements – Topic 4: Nested if
+-------------------------------------------------------------------
+
+"Guys, if-kulla innum oru if write pannalama?
+
+✅ Yes.
+
+Adhu dhaan Nested if.
+-------------------------------------------------------------------
+Simple ah sonna,
+
+Oru condition true aana apram, adhukulla innum oru condition check panradhu."
+-------------------------------------------------------------------
+📖 Real-life Story
+
+"College admission-ku pona...
+
+Step 1: 12th pass pannirukingala?
+
+✅ Yes
+
+Step 2: Cut-off mark 180+ iruka?
+
+✅ Yes
+
+Appo dhaan admission.
+-------------------------------------------------------------------
+Ippo paathingala...
+
+Oru condition mudincha apram dhaan next condition check panranga.
+
+Idhu dhaan Nested if."
+-------------------------------------------------------------------
+
+Easy Remember:
+
+First if → Main Gate 🚪
+Second if → Inside Room 🚪
+
+Outside gate pass pannina dhaan inside room-ku poga mudiyum.
+-------------------------------------------------------------------
+💻 Practical 1 – Voting + ID Card
+-------------------------------------------------------------------
+let age = 20;
+let hasID = true;
+
+if (age >= 18) {
+
+    if (hasID) {
+        console.log("Eligible to Vote");
+    }
+
+}
+-------------------------------------------------------------------
+Output
+Eligible to Vote
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+💻 Practical 2
+-------------------------------------------------------------------
+let age = 16;
+let hasID = true;
+
+if (age >= 18) {
+
+    if (hasID) {
+        console.log("Eligible to Vote");
+    }
+
+}
+-------------------------------------------------------------------
+Output
+No Output
+Examples:
+
+"Login successful-ah irundha next page-ku continue."
+
+"Element available-ah irundha click."
+---
+LOOPS
+Console-la 'Hello Students' 5 times print pannunga."
+
+Most students will write:
+-----------------------------------------------------------------------
+console.log("Hello Students");
+console.log("Hello Students");
+console.log("Hello Students");
+console.log("Hello Students");
+console.log("Hello Students");
+-----------------------------------------------------------------------
+Trainer:
+
+"5 times ezhudhuna paravala...
+
+100 times print panna sonna?
+
+1000 times?
+
+10000 times?
+
+Copy paste pannuveengala?
+-----------------------------------------------------------------------
+❌ Impossible."
+-----------------------------------------------------------------------
+"Adhuku dhaan JavaScript la Loops irukku."
+-----------------------------------------------------------------------
+Programming-layum same work repeatedly execute panna Loop use pannuvom."
+
+✅ What is a Loop?
+
+Loop na,
+
+Oru block of code-ah repeatedly execute panna use panra statement.
+
+Simple-a sonna,
+
+Repeat work → Loop.
+-----------------------------------------------------------------------
+🌍 Real-world Examples
+
+Print bills for 100 customers.
+Send emails to 500 users.
+Display products in Amazon.
+Show Instagram posts.
+Process student marks.
+
+Company projects-la loops daily use pannuvanga.
+
+---
+First Look at a Loop
+-----------------------------------------------------------------------
+for (let i = 1; i <= 5; i++) {
+    console.log("Welcome");
+}
+-----------------------------------------------------------------------
+Output
+-----------------------------------------------------------------------
+Welcome
+Welcome
+Welcome
+Welcome
+Welcome
+---------------------------------
+✅ What is a for Loop?
+
+for loop is used when we know how many times we want to repeat a task.
+
+Example:
+
+Print 10 numbers.
+Print 100 students.
+Send 50 emails.
+-----------------------------------------------------------------------
+Syntax
+
+for (initialization; condition; increment/decrement) {
+    // code
+}
+-----------------------------------------------------------------------
+Trainer:
+
+
+Idhula 3 parts dhaan irukku."
+
+🧩 Understanding the 3 Parts
+-----------------------------------------------------------------------
+for (let i = 1; i <= 5; i++)
+1️ . Initialization
+let i = 1;
+
+➡️ Loop enga start aaganum?
+
+Start = 1
+
+2️. Condition
+i <= 5
+
+➡️ Loop eppo stop aaganum?
+
+5 varaikkum run pannum.
+
+3️. Increment
+i++
+
+➡️ Every iteration-ku i value 1 increase aagum.
+----------------------------------------------------
+Easy Formula
+
+Start ➜ Check ➜ Execute ➜ Increase ➜ Repeat
+
+---
+Print Even Numbers
+
+for (let i = 2; i <= 10; i += 2) {
+    console.log(i);
+}
+-----------------------------------------------------------------------
+Output
+
+2
+4
+6
+8
+10
+Trainer:
+
+"i += 2 na every time 2 increase aagudhu."
+-------------------------
+while LOOP
+⏱️ 38–40 minutes
+Definition
+
+A while loop repeats code as long as its condition is true.
+
+Tanglish
+
+"while loop-la first condition check pannuvom."
+
+"Condition true irukkura varaikkum code repeat aagum."
+
+Example:
+
+let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+
+Output:
+
+1
+2
+3
+4
+5
+
+Explain:
+
+"First i = 1."
+
+"Check condition."
+
+"True → print."
+
+"Increment."
+
+"Again condition."
+
+Important:
+
+"Condition eventually false aaganum. Illana loop stop aagama continue aagalam."
+
+No need to introduce infinite-loop edge cases deeply today.
+---
+✅ What is a while Loop?
+
+while loop runs as long as the condition is true.
+
+Simple-a sonna,
+
+Condition true irukkura varaikkum repeat pannum.
+-----------------------------------------------------------------------
+Syntax
+
+while (condition) {
+    // code
+}
+-----------------------------------------------------------------------
+💻 Practical 1 – Print 1 to 5
+-----------------------------------------------------------------------
+let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+-----------------------------------------------------------------------
+Output
+
+1
+2
+3
+4
+5
+-----------------------------------------------------------------------
+📝 Explain Line by Line
+
+let i = 1;
+
+➡️ Starting value.
+
+while (i <= 5)
+
+➡️ Condition check pannudhu.
+
+True na loop execute aagum.
+
+console.log(i);
+
+➡️ Current value print pannudhu.
+
+i++;
+
+➡️ i value increase pannudhu.
+
+Again condition check pannum.
+--------------------------------------------
+Reverse Counting
+-----------------------------------------------------------------------
+let i = 5;
+
+while (i >= 1) {
+    console.log(i);
+    i--;
+}
+-----------------------------------------------------------------------
+Output
+
+5
+4
+3
+2
+1
+-----------------------------------------------------------------------
+🌍 Company Usage
+-----------------------------------------------------------------------
+Login attempts
+ATM PIN validation
+Reading data until it ends
+Chat applications
+Background processes
+do-while
+⏱️ 40–42 minutes
+
+A do-while loop executes the code once first and then checks the condition.
+
+Tanglish
+
+"do-while first code execute pannum."
+
+"After that condition check pannum."
+
+Example:
+
+let i = 1;
+
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+
+Output:
+
+1
+2
+3
+4
+5
+📝 Explain Line by Line
+let i = 1;
+
+➡️ Starting value.
+
+do {
+
+➡️ First, code execute aagum.
+
+console.log(i);
+
+➡️ Current value print pannudhu.
+
+i++;
+
+➡️ Value increase pannudhu.
+
+while (i <= 5);
+
+➡️ Ippo condition check pannudhu.
+
+True na repeat.
+
+False na stop.
+
+---
+for vs while vs do-while
+
+Keep it simple:
+
+for
+→ Usually useful when we know how we want to count/repeat.
+
+while
+→ Repeat while a condition remains true.
+
+do-while
+→ Execute at least once, then check the condition.
+
+💼 Interview Tip
+
+Question: Difference between while and do...while?
+
+Answer:
+
+while → Condition checked first. It may execute 0 times.
+do...while → Code executes first. It executes at least once.
+-----------------------------------------------------------------------
+📌 Final Recap – Loops
+Loop	When to Use
+
+for	Number of iterations is known
+while	Number of iterations is not known
+do...while	Code must execute at least once
+-----------------------------------------------------------------------
+ Remember
+for → Known count
+while → Condition first
+do...while → Execution first
+----------------------------------
+FINAL REAL-TIME CONNECTION TO PLAYWRIGHT
+
+End with this example:
+
+"Suppose real project-la 100 products test pannanum."
+
+"Each product-ku same test steps."
+
+Ask:
+
+"Same code 100 times write pannuvoma?"
+
+No.
+
+"Loop use pannalam."
+
+"Suppose product price 1000-ku mela irundha special test."
+
+"Comparison + condition use pannalam."
+
+"Suppose user logged in AND active."
+
+"Logical operator use pannalam."
+
+"Suppose expected value actual value same-ah?"
+
+"Comparison operator use pannalam."
+
+So tell them:
+
+"Operators help us calculate and compare."
+
+"Conditions help us make decisions."
+
+"Loops help us repeat work."
+
+"In Playwright automation, these three concepts combine with browser actions to create real test logic."
